@@ -1,0 +1,17 @@
+--- a/smali/com/github/eka2l1/emu/EmulatorActivity.smali
++++ b/smali/com/github/eka2l1/emu/EmulatorActivity.smali
+@@ -1740,12 +1740,9 @@
+-    iget v4, v2, Lk2/o;->f:I
+-    iget v5, v2, Lk2/o;->h:I
+-    iget v6, v2, Lk2/o;->i:I
++    const/16 v4, 0x64       # 100% scale ratio
++    const/4 v5, 0x1        # ScaleType: Fit (16:9)
++    const/4 v6, 0x2        # Gravity: Center
+@@ -2946,6 +2943,7 @@
+ .method public final q(I)V
+     .locals 1
+ 
++    const/4 p1, 0x0        # ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+     invoke-virtual {p0, p1}, Landroid/app/Activity;->setRequestedOrientation(I)V
+     return-void
+ .end method

@@ -1,0 +1,19 @@
+# Build output and temporary files
+build/
+bin/
+*.apk
+*.idsig
+*.zip
+*.dex
+*.class
+*.keystore
+
+# Tools binaries
+tools/*.jar
+
+# IDE and OS
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
